@@ -4,13 +4,16 @@
 #include <math.h>
 #include "Sender.h"
 
+#define BUFFERSIZE 50
 
-int DataGenerator(int size)
+
+int* DataGenerator()
 {
-  int gen;
-  for(int i=1;i<=size;i++)
+  static int r[BUFFERSIZE];
+  for(int i=1;i<=BUFFERSIZE;i++)
   {
-    gen = rand()%50;
+    r[i] = rand()%50;
+    
   }
-  return gen;
+  return r;
 }

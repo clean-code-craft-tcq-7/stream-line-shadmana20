@@ -6,14 +6,20 @@
 
 #define BUFFERSIZE 50
 
+SensorData_tst SensorData_st;
 
-int* DataGenerator()
+
+int DataGenerator()
 {
-  static int r[BUFFERSIZE];
-  for(int i=1;i<=BUFFERSIZE;i++)
-  {
-    r[i] = rand()%50;
-    
-  }
+  r = rand()%50;
   return r;
+}
+
+static void intializeBuffer()
+{
+  for(int i=1;i<=BUFFERSIZE;i++){
+  SensorData_st.BatteryTemp[i] = DataGenerator();
+  SensorData_st.SensorValue[i] = DataGenerator();
+  }
+  
 }

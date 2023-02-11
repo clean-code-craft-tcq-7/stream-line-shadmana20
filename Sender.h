@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define BUFFERSIZE  50
-int* DataGenerater();
+SensorData_tst* Init();
 
 
 typedef struct {

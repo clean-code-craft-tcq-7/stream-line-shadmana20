@@ -6,20 +6,33 @@
 
 #define BUFFERSIZE 50
 
-SensorData_tst SensorData_st;
 
-
-int DataGenerator()
+SensorData_tst Init()
 {
-  r = rand()%50;
-  return r;
+  static SEN sen[SIZE];
+  SensorData_tst SensorData_st
+  for(int i=0;i<SIZE;i++)
+    {
+       SensorData_st->BatteryTemp[i] = rand()%50;
+       SensorData_st->SensorValue[i] = rand()%50;
+    }
+    return sen;
 }
 
-static void intializeBuffer()
+
+  
+char* PassToBuffer()
 {
-  for(int i=1;i<=BUFFERSIZE;i++){
-  SensorData_st.BatteryTemp[i] = DataGenerator();
-  SensorData_st.SensorValue[i] = DataGenerator();
-  }
+    SensorData_tst *mid;
+    static returnBuffer[SIZE];
+    char buffer[SIZE][SIZE];
+    mid = init();
+    for(int i=0;i<SIZE;i++)
+    {
+       sprintf(buffer[i], " %d  ,  %d \n", *(mid->BatteryTemp+i),*(mid->SensorValue+i));
+       returnBuffer[i] = buffer[i];
+    }
+    
+  return returnBuffer;
   
 }

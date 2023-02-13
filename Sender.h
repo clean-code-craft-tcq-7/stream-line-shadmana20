@@ -4,6 +4,6 @@ SensorData_tst* Init();
 
 
 typedef struct {
-  int BatteryTemp[BUFFERSIZE];
-  int SensorValue[BUFFERSIZE];
+  int* BatteryTemp;
+  int* SensorValue;
 }SensorData_tst;

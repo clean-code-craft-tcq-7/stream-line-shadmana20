@@ -42,4 +42,8 @@ char* passToBuffer()
     return ReturnedBuffer;
     
 }
-
+int main()
+{
+    (void)passToBuffer();
+    return 0;
+}

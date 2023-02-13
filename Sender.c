@@ -28,7 +28,7 @@ char* PassToBuffer()
     SensorData_tst *mid;
     static returnBuffer[SIZE];
     char buffer[SIZE][SIZE];
-    mid = init();
+    mid = Init();
     for(int i=0;i<SIZE;i++)
     {
        sprintf(buffer[i], " %d  ,  %d \n", *(mid->BatteryTemp+i),*(mid->SensorValue+i));

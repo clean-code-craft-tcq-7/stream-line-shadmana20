@@ -7,15 +7,11 @@
 #define SIZE 50
 
 SensorData_tst* Init();
-typedef struct SensorData_tst SensorData_st
-struct{
-   int BatteryTemp[SIZE];
-   int SensorValue[SIZE];
-}SensorData_tst;
+
 
 
 SensorData_tst * init()
-{   static SensorData_st sen[SIZE];
+{   static SensorData_tst sen[SIZE];
     
     for(int i=0;i<SIZE;i++)
     {
@@ -30,7 +26,7 @@ SensorData_tst * init()
   
 char* passToBuffer()
 {
-    SensorData_st *Mid;
+    SensorData_tst *Mid;
     char buffer[SIZE][SIZE];
     static char ReturnedBuffer[SIZE];
     Mid = init();

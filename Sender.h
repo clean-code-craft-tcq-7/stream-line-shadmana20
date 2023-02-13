@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define BUFFERSIZE  50
+#define SIZE  50
 SensorData_tst* Init();
 
 
@@ -8,4 +8,8 @@ typedef struct {
   int* SensorValue;
 }SensorData_tst;
 
-
+typedef struct{
+   int a[SIZE];
+   int b[SIZE];
+    
+}SensoData_tst;

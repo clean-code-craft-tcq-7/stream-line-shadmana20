@@ -9,7 +9,7 @@
 
 SensorData_tst Init()
 {
-  static SEN sen[SIZE];
+  static SensorData_tst sen[SIZE];
   SensorData_tst SensorData_st
   for(int i=0;i<SIZE;i++)
     {

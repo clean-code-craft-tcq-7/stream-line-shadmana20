@@ -2,14 +2,8 @@
 #define SIZE  50
 SensorData_tst* Init();
 
-
-typedef struct {
-  int* BatteryTemp;
-  int* SensorValue;
-}SensorData_tst;
-
 typedef struct{
-   int a[SIZE];
-   int b[SIZE];
+   int BatteryTemp[SIZE];
+   int SensorValue[SIZE];
     
 }SensoData_tst;

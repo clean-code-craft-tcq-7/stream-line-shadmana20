@@ -30,7 +30,7 @@ char* passToBuffer()
     char buffer[SIZE][SIZE];
     static char ReturnedBuffer[SIZE];
     Mid = init();
-    printf("Temperature , Value\n") ;
+    printf("Sensor-Temperature , Sensor-Value\n") ;
     for(int i=0;i<SIZE;i++)
     {
        //printf(" %d : %d , %d \n",i,*(g->a+i),*(g->b+i));

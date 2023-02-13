@@ -4,7 +4,7 @@
 #include <math.h>
 #include "Sender.h"
 
-#define BUFFERSIZE 50
+#define SIZE 50
 
 
 SensorData_tst* Init()

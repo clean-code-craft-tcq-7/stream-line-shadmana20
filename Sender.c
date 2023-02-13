@@ -31,7 +31,8 @@ char* passToBuffer()
     {
        //printf(" %d : %d , %d \n",i,*(g->a+i),*(g->b+i));
        sprintf(buffer[i], "%d , %d \n", *(Mid->BatteryTemp+i),*(Mid->SensorValue+i));
-       ReturnedBuffer[i] = buffer[i];
+       //ReturnedBuffer[i] = buffer[i];
+       printf("Temperature , Value") ;
        printf("%s", buffer[i]);
     }
     

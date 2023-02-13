@@ -7,7 +7,7 @@
 #define BUFFERSIZE 50
 
 
-SensorData_tst Init()
+SensorData_tst* Init()
 {
   static SensorData_tst sen[SIZE];
   SensorData_tst SensorData_st;

@@ -6,4 +6,4 @@ typedef struct{
    int BatteryTemp[SIZE];
    int SensorValue[SIZE];
     
-}SensoData_tst;
+}SensorData_tst;

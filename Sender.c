@@ -25,7 +25,7 @@ char* passToBuffer()
 {
     SensorData_tst *Mid;
     char buffer[SIZE][SIZE];
-    static ReturnedBuffer[SIZE];
+    static char ReturnedBuffer[SIZE];
     Mid = init();
     for(int i=0;i<SIZE;i++)
     {

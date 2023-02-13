@@ -7,34 +7,35 @@
 #define SIZE 50
 
 
-SensorData_tst* Init()
-{
-  static SensorData_tst sen[SIZE];
-  SensorData_tst SensorData_st;
-  for(int i=0;i<SIZE;i++)
+SensorData_tst * init()
+{   static SensorData_tst sen[SIZE];
+    
+    for(int i=0;i<SIZE;i++)
     {
-       SensorData_st->BatteryTemp[i] = rand()%50;
-       SensorData_st->SensorValue[i] = rand()%50;
-       sen->BatteryTemp[i] = SensorData_st->BatteryTemp[i];
-       sen->SensorValue[i] =  SensorData_st->SensorValue[i];
+       sen->BatteryTemp[i] = rand()%50;
+       sen->SensorValue[i] = rand()%50;
+       
     }
     return sen;
 }
 
 
   
-char* PassToBuffer()
+char* passToBuffer()
 {
-    SensorData_tst *mid;
-    static returnBuffer[SIZE];
+    SensorData_tst *Mid;
     char buffer[SIZE][SIZE];
-    mid = Init();
+    static ReturnedBuffer[SIZE];
+    Mid = init();
     for(int i=0;i<SIZE;i++)
     {
-       sprintf(buffer[i], " %d  ,  %d \n", *(mid->BatteryTemp+i),*(mid->SensorValue+i));
-       returnBuffer[i] = buffer[i];
+       //printf(" %d : %d , %d \n",i,*(g->a+i),*(g->b+i));
+       sprintf(buffer[i], "%d , %d \n", *(Mid->BatteryTemp+i),*(Mid->SensorValue+i));
+       ReturnedBuffer[i] = buffer[i];
+       printf("%s", buffer[i]);
     }
     
-  return returnBuffer;
-  
+    return ReturnedBuffer;
+    
 }
+

@@ -28,15 +28,14 @@ char* passToBuffer()
 {
     SensorData_tst *Mid;
     char buffer[SIZE][SIZE];
-    static char* ReturnedBuffer;
-    ReturnedBuffer = malloc (sizeof (char)*SIZE);
+    static char ReturnedBuffer[SIZE];
     Mid = init();
     printf("Sensor-Temperature , Sensor-Value\n") ;
     for(int i=0;i<SIZE;i++)
     {
        //printf(" %d : %d , %d \n",i,*(g->a+i),*(g->b+i));
        sprintf(buffer[i], " %d , %d \n", *(Mid->BatteryTemp+i),*(Mid->SensorValue+i));
-       *ReturnedBuffer = buffer[i];
+       ReturnedBuffer = (char)buffer[i];
      
        printf("%s", buffer[i]);
     }

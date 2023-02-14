@@ -28,7 +28,7 @@ char* passToBuffer()
 {
     SensorData_tst *Mid;
     char buffer[SIZE][SIZE];
-    static char ReturnedBuffer[SIZE];
+    static char ReturnedBuffer[SIZE][SIZE];
     Mid = init();
     printf("Sensor-Temperature , Sensor-Value\n") ;
     for(int i=0;i<SIZE;i++)

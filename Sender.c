@@ -35,7 +35,7 @@ char* passToBuffer()
     {
        //printf(" %d : %d , %d \n",i,*(g->a+i),*(g->b+i));
        sprintf(buffer[i], " %d , %d \n", *(Mid->BatteryTemp+i),*(Mid->SensorValue+i));
-       ReturnedBuffer = (char)buffer[i];
+       ReturnedBuffer = (char*)buffer[i];
      
        printf("%s", buffer[i]);
     }

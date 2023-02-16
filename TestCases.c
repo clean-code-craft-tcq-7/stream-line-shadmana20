@@ -13,7 +13,7 @@ void TEST_CASE_01()
 void TEST_CASE_02()
 {
   SensorData_st test_01;
-  assert(SendBatteryParameters(&test_01,20) == DATA_SENDING_OK);
+  assert(SendBatteryParameters(&test_01,50) == DATA_SENDING_OK);
 }
 int main()
 {

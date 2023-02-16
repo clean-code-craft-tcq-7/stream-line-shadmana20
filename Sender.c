@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "BMS_DataSender.h"
+#include "Sender.h"
 
 void PrintBatteryData(float BatteryTemp,float BatterySoc)
 {

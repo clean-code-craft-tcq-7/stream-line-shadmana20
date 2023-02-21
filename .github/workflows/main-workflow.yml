@@ -24,7 +24,7 @@ jobs:
       run: cd ./Receiver; g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o Receiver *.c*
     
     - name: run_combined
-      run: cd /Receiver; ../Sender| /.Receiver
+      run: cd ./Receiver; ../Sender| /.Receiver
 
     - name: collect coverage
       run: gcovr --gcov-exclude=".*test.*" -r . --html --html-details -o coverage.html --print-summary

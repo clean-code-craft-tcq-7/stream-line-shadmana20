@@ -21,8 +21,7 @@ jobs:
       run: ./Sender
       
     - name: build_receiver
-      run: cd ./Receiver
-           g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o Receiver *.c*
+      run: cd ./Receiver; g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o Receiver *.c*
     
     - name: run_combined
       run: ../Sender|./Receiver
